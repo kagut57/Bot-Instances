@@ -9,6 +9,9 @@ from pathlib import Path
 import tempfile
 import traceback
 
+from config import repos
+from api import web_server
+
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
@@ -185,6 +188,7 @@ async def run_repos(configs: List[RepoConfig]):
                 pass
 
 async def main():
+    await web_server() #for koyeb and render
     try:
         await run_repos(repos)
     except Exception as e:
