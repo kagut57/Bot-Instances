@@ -185,14 +185,8 @@ async def run_repos(configs: List[RepoConfig]):
                 pass
 
 async def main():
-    #if repo is private the add token with link as shown below
-    configs = [
-        RepoConfig("https://<token>@github.com/kagut57/mangabot/", "master", "python3 main.py"),
-        RepoConfig("https://github.com/Joyboy125/Auto-Rename-Bot.git", "main", "python3 bot.py")
-    ]
-
     try:
-        await run_repos(configs)
+        await run_repos(repos)
     except Exception as e:
         logger.critical(f"[SYSTEM] Critical error: {str(e)}")
         traceback.print_exc()
