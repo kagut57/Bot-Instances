@@ -1,4 +1,4 @@
-#if repo is private the add token with link as shown below
+#if repo is private then add token with link as shown below
 #foramt: repo_url, branch, start command
 
 repos = [
